@@ -25,7 +25,7 @@ namespace Simbirsoft_Practice
             if (!File.Exists(path))
             {
                 Console.WriteLine("Файловые сайты не существуют, ");
-                string[] createText = { "https://www.google.com/", "https://yandex.com/", "https://www.cnet.com/" };
+                string[] createText = { "https://www.vk.com/", "https://www.simbirsoft.com/", "https://www.google.com/" };
                 File.WriteAllLines(path, createText);
             }
 
