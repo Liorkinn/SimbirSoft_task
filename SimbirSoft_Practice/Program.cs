@@ -12,7 +12,6 @@ namespace Simbirsoft_Practice
         static void Main(string[] args)
         {
             Console.WriteLine("Приложение запущено... \nНажмите любую кнопку для работы программы.");
-            //Console.WriteLine("Press any key to Start");
             Console.ReadKey();
             Program program = new Program();
             program.Start();
