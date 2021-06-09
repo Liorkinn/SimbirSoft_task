@@ -8,36 +8,7 @@ using static System.Net.Mime.MediaTypeNames;
 namespace Simbirsoft_Practice
 {
     public class FileWorker
-    {
-        /// <summary>
-        /// Read file sites.txt
-        /// else generate file and test data
-        /// </summary>
-        /// <returns></returns>
-        public string[] ReadFile()
-        {
-            string[] readText;
-            string[] tempReadText;
-            // Get the current directory
-            string directory = Directory.GetCurrentDirectory();
-            string site = "sites.txt";
-            string path = directory + @"\" + site;
-            if (!File.Exists(path))
-            {
-                Console.WriteLine("Файловые сайты не существуют, ");
-                string[] createText = { "https://www.vk.com/", "https://www.simbirsoft.com/", "https://www.google.com/" };
-                File.WriteAllLines(path, createText);
-            }
-
-            tempReadText = File.ReadAllLines(path);
-            readText = CheckUrl(tempReadText);
-            if (readText == null)
-            {
-                System.Environment.Exit(-1);
-            }
-            return readText;
-        }
-
+    {     
         private string[] CheckUrl(string[] checkurl)
         {
             List<string> tempReadTextCheck = new List<string>();
